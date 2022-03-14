@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Interação</title>
+    <link rel="stylesheet" href="Teste.css">
+    <style>
+        div{text-align: center;
+            font: italic 20pt Arial;
+            background-color: rgb(2, 2, 197);
+            color: whitesmoke;
+            width: 200px;/*Largura*/
+            height: 200px;/*Altura*/
+            line-height: 200px;/*Altura da escrita*/
+        }
+        body{
+            background-color: rgba(150, 150, 150, 0.774);
+        }
+      h1{color: rgb(91, 0, 177);
+        font: italic;
+       text-align: center;
+      }
+    </style>   
+</head>
+<body>
+    <h1>Testes de Interação JS</h1>
+    <div id="local" ><!-- O comando onclick, serve para um clique simples do mause-->
+     Não me toque!
+    </div>
+    <script>
+        var b = document.getElementById('local') //Esse comando serve para vereficar se a função foi comprida
+            //Como a div recebeu o nome da variavel 'local', está foi representada no comando acima
+            b.addEventListener('click',tapinha) 
+            b.addEventListener('mouseout',vazou)
+            b.addEventListener('mouseenter',entrou)
+        function tapinha () {
+            b.innerText = 'Temioso!'// O comando innerText serve para mudar o texto escrito com base na ação ja programada
+        }
+        function entrou() {
+            b.innerText = 'Nem tente!'
+            
+        }
+        function vazou() {
+            b.innerText = 'Não me toque!'
+        }
+    </script>
+</body>
+</html>
